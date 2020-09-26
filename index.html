@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/travelling.png">
+    <title>Travel Autorizathion Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center pt-5 mt-5 mr-1">
+            <div class="col-md-6 formulario">
+                <form action="form-order" id="formulario">
+                    <div class="form-group text-center pt-3">
+                        <h2 class="text-light">TRAVEL AUTORIZATHION FORM</h2>
+                    </div>
+                    <div class="form-group mx-sm-4 text-light">
+                        <div class="container1">
+                            <h6>Sección A: Información del cliente</h6>
+                            <fieldset>
+                                <p>
+                                    <label for="cargo">Cargo: </label>
+                                    <input class="input" type="text" name="cargo" id="cargo" onkeyup="javascript:this.value=this.value.toUpperCase();" pattern="[A-Z]{4,100}" title="Mínimo de 4 caracteres y máximo 100" autofocus required>
+                                </p>
+                                <p>
+                                    <label for="nombre">Nombre: </label>
+                                    <input class="input" type="text" name="nombre" id="nombre" onkeyup="javascript:this.value=this.value.toUpperCase();" pattern="[A-Z]{4,100}" title="Mínimo de 4 caracteres y máximo 100" required>
+                                </p>
+                                <p>
+                                    <label for="pApellido">Primer apellido: </label>
+                                    <input class="input" type="text" name="pApellido" id="pApellido" onkeyup="javascript:this.value=this.value.toUpperCase();" pattern="[A-Z]{4,100}" title="Mínimo de 4 caracteres y máximo 100" required>
+                                </p>
+                                <p>
+                                    <label for="sApellido">Segundo apellido: </label>
+                                    <input class="input" type="text" name="sApellido" id="sApellido" onkeyup="javascript:this.value=this.value.toUpperCase();" pattern="[A-Z]{4,100}" title="Mínimo de 4 caracteres y máximo 100" required>
+                                </p>
+                                <p>
+                                    <label for="cElectronico">Correo electrónico: </label>
+                                    <input class="input" type="email" name="cElectronico" id="cElectronico" placeholder="Ejem: usuario@gmail.com" required>
+                                </p>
+                                <div class="form-group" id="grupo__telefono">
+                                    <label for="telefono" class="formulario__label">Número de teléfono: </label>
+                                    <input class="input" type=number name="telefono" id="telefono" pattern="[0-9] {9}" title="Deben ser 9 dígitos" placeholder="Ejem: 999999999" required>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="container2">
+                            <h6>Sección B: Información de viaje</h6>
+                            <fieldset>
+                                <div>
+                                    <label for="nAerolinea">Nombre de Aerolínea: </label>
+                                    <select class="input" name="nAerolinea">
+                                        <option value="">Seleccione una aerolínea</option>
+                                        <option value="latam">LATAM</option>
+                                        <option value="star">Star Perú</option>
+                                        <option value="peruvian">Peruvian Airlines</option>
+                                        <option value="continental">Continental Airlines</option>
+                                        <option value="sky">Sky Airlines</option>
+                                        <option value="atsa">ATSA</option>
+                                        <option value="avianca">Avianca</option>
+                                        <option value="aeroica">AEROICA</option>
+                                    </select>
+                                </div>
+                                <div>
+
+                                    <label for="destino">Destino: </label>
+                                    <input class="input" type="text" name="destino" id="destino" pattern="[A-za-z]{1,100}" title="Solo letras" required>
+                                </div>
+                                <div>
+                                    <label for="fSalida">Fecha de salida: </label>
+                                    <input class="input" type="date" name="fSalida" id="fSalida" min="2020-01-01">
+                                </div>
+                                <div>
+                                    <label for="fRegreso">Fecha de regreso: </label>
+                                    <input class="input" type="date" name="fRegreso" id="fRegreso" min="2020-01-01">
+                                </div>
+                                <div>
+                                    <label for="coste">Coste estimado: </label>
+                                    <input class="input" type="number" name="coste" id="coste" pattern="[0-9]" min="100" max="1000" title="Coste entre 100 y 1000" required>
+                                </div>
+                                <div>
+                                    <br>
+                                    <label for="vCliente">¿Incluye la visita al cliente? </label>
+                                    <input class="checkbox" type="checkbox" name="vCliente" id="vCliente">
+                                </div>
+                            </fieldset>
+
+                        </div>
+
+                        <div class="columna">
+
+                            <div class="container3">
+                                <p>Gastos adicionales estimados</p>
+                                <div class="form-group">
+                                    <label class="" for="alquiler">Alquiler de coche </label>
+                                    <input class="input3" type="number" name="alquiler" id="alquiler" pattern="[0-9]" min="100" max="600" title="Coste entre 100 y 600" required>
+
+                                </div>
+                                <div>
+                                    <label for="hotel">Hotel </label>
+                                    <input class="input3" type="text" name="hotelr" id="hotel">
+                                </div>
+                                <div>
+                                    <label for="comidas">Comidas</label>
+                                    <input class="input3" type="number" name="comidas" id="comidas" pattern="[0-9]" required>
+                                </div>
+                                <div>
+                                    <label for="total">Total Estimado</label>
+                                    <input class="input3" type="text" name="total" id="total">
+                                </div>
+                            </div>
+                            <div class="container4">
+                                <p>Método de pago utilizado</p>
+                                <div class="radio">
+                                    <p>
+                                        <input type="radio" name="metodo" value="metalico" checked=""> Metálico
+                                    </p>
+                                    <p>
+                                        <input type="radio" name="metodo" value="tarjeta"> Tarjeta
+                                    </p>
+                                    <p>
+                                        <input type="radio" name="metodo" value="cheque"> Cheque
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+                            <p><label for="proposito">Propósito del viaje</label></p>
+                            <textarea class="cajaTexto" name="prposito" id="proposito" cols="30" rows="10"></textarea>
+                        </div>
+
+
+                        </fieldset>
+                        <br>
+
+
+                        <div class="">
+                            <!--  
+                        <input class="btn btn-block" type="submit" name="enviar">-->
+                            <br>
+                            <button type="submit" class="button">
+                            Enviar
+                            <span></span>
+                        </button>
+                        </div>
+
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

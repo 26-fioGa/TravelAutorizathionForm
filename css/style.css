@@ -1,0 +1,145 @@
+body {
+    background-image: url(../images/avion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.formulario {
+    background: rgba(0, 0, 0, .1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: white;
+    margin-bottom: auto;
+}
+
+.container1,
+.container2 {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container3 {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 25px;
+    margin-right: auto;
+}
+
+.container4 {
+    margin-left: 25px;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+}
+
+.input {
+    background: rgba(0, 0, 0, .3);
+    border-style: none;
+    width: 450px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    color: white;
+}
+
+.input3 {
+    background: rgba(0, 0, 0, .3);
+    border-style: none;
+    width: 250px;
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 7px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cajaTexto {
+    background: rgba(0, 0, 0, .3);
+    border-style: none;
+    width: 480px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    color: white;
+}
+
+.select {
+    background: rgba(0, 0, 0, .3);
+    border-style: none;
+    height: 30px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    color: white;
+}
+
+.input::placeholder {
+    color: beige;
+}
+
+.button {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.5em 2.2em;
+    font-size: 20px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: wheat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(71, 62, 100);
+    z-index: -1;
+    border: 3px solid rgb(71, 62, 100);
+}
+
+.button span::before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 380%;
+    background: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-72deg);
+    transition: all .3s;
+}
+
+.button:hover span::before,
+.button:focus span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 45%;
+    background: rgb(41, 29, 85);
+}
+
+.button:hover,
+.button:focus {
+    color: white;
+}
